@@ -1,6 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
 
-import '../../css/App.css';
 import { Auth } from '../../widgets/auth';
 import { Home } from '../../widgets/home';
 import { Leaderboard } from  '../../widgets/leaderboard'
@@ -9,7 +8,10 @@ import { Question } from '../../widgets/questionDetail'
 function App() {
   return (
     <>
-      <h1>Employee Polls</h1>
+      <header className='header'>
+        <h1>Employee Polls</h1>
+      </header>
+      <div className='body-content'>
         <Routes>
           <Route
             path = '/'
@@ -28,6 +30,7 @@ function App() {
             element={<Leaderboard />} 
           />
         </Routes>
+      </div>
     </>
   )
 }
