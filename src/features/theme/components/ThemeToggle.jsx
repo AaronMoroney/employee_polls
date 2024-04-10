@@ -13,13 +13,16 @@ const ThemeToggle = () => {
         setTheme(!theme);
     }
     return (
-        <>
-            <IconButton 
-                aria-label="theme"
-                onClick={handleToggleTheme}
-            >
-                {theme  ? <DarkModeIcon/> : <LightModeIcon/>}
-            </IconButton>
+        <>  
+            <div style={{ display: 'flex',  flexDirection: 'row'  }}>
+                <p>Toggle Theme</p>
+                <IconButton 
+                    aria-label="theme"
+                    onClick={handleToggleTheme}
+                >
+                    {theme  ? <DarkModeIcon/> : <LightModeIcon/>}
+                </IconButton>
+            </div>
         </>
     )
 }

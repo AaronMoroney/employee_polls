@@ -4,13 +4,10 @@ import {
     Paper, 
 } from '@mui/material'
 
-import { ThemeToggle} from '../../theme'
-
 const Navigation = () => {
-
     return (
         <Paper
-            sx={{padding: '1% 3%',  borderRadius: '30px' }}
+            sx={{padding: '1% 1% 1% 2%',  borderRadius: '30px' }}
         >
             <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
                 <h1 className='logo'>
@@ -21,7 +18,6 @@ const Navigation = () => {
                     <Avatar
                      sx={{ width: 56, height: 56, marginLeft: '10px' }}
                     />
-                    <ThemeToggle />
                 </Box>
             </Box>
         </Paper>
