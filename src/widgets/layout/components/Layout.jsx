@@ -1,22 +1,24 @@
-import PropTypes from 'prop-types';
+import { Box } from '@mui/material';
+
 import { Navigation } from '../../../features/navigation';
 import { Sidebar } from '../../../features/sidebar'
+import { Outlet } from 'react-router-dom';
 
-
-const Layout = ({children}) => {
+const Layout = () => {
     return (
         <>
-            <Navigation />
-            <Sidebar />
-            <main>
-                {children}
-            </main>
+            <Box>
+                <Navigation />
+            </Box>
+            <Box sx={{marginLeft: '10px',  display: 'flex', flexDirection: 'row'}}>
+                <Sidebar />
+                <Box sx={{ width: '100%', marginTop: '30px', marginLeft: '30px'}}>
+                <Outlet />
+                </Box>
+            </Box>
         </>
     )
 }
 
-export default Layout
 
-Layout.propTypes = {
-    children: PropTypes.node.isRequired,
-};
+export default Layout
