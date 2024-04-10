@@ -4,6 +4,8 @@ import {
     Paper, 
 } from '@mui/material'
 
+import { ThemeToggle} from '../../theme'
+
 const Navigation = () => {
 
     return (
@@ -19,6 +21,7 @@ const Navigation = () => {
                     <Avatar
                      sx={{ width: 56, height: 56, marginLeft: '10px' }}
                     />
+                    <ThemeToggle />
                 </Box>
             </Box>
         </Paper>

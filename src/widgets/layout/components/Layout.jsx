@@ -1,8 +1,7 @@
-import { Box } from '@mui/material';
-
-import { Navigation } from '../../../features/navigation';
-import { Sidebar } from '../../../features/sidebar'
 import { Outlet } from 'react-router-dom';
+import { Box } from '@mui/material';
+import { Navigation } from '../../../features/navigation';
+import { Sidebar } from '../../../features/sidebar';
 
 const Layout = () => {
     return (
