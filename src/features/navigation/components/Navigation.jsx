@@ -11,7 +11,7 @@ const Navigation = () => {
         >
             <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
                 <h1 className='logo'>
-                    Employee-polls
+                    Oyee-polls
                 </h1> 
                 <Box sx={{display: 'flex',  alignItems: 'center', justifyContent: 'center' }}>
                     <p>username</p>

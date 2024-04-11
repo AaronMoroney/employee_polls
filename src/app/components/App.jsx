@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 
-import { Auth } from '../../widgets/auth';
-import { Home } from '../../widgets/home';
-import { Leaderboard } from  '../../widgets/leaderboard'
+import { Auth } from '../../pages/auth';
+import { Home } from '../../pages/home';
+import { Leaderboard } from  '../../pages/leaderboard'
 // import { Question } from '../../widgets/questionDetail'
-import { Settings } from '../../widgets/settings'
-import { Create } from '../../widgets/create'
+import { Settings } from '../../pages/settings'
+import { Create } from '../../pages/create'
 import { Layout } from '../../widgets/layout'
 import { Box} from '@mui/material'
 

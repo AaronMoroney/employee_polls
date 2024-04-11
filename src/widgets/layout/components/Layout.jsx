@@ -12,9 +12,9 @@ const Layout = () => {
             <Box>
                 <Navigation />
             </Box>
-            <Box sx={{marginLeft: '10px',  display: 'flex', flexDirection: 'row'}}>
+            <Box className="gparent"sx={{marginLeft: '10px',  display: 'flex', flexDirection: 'row'}}>
                 <Sidebar />
-                <Box sx={{ width: '100%', marginTop: '30px', marginLeft: '30px'}}>
+                <Box className="parent"sx={{ width: '100%', marginTop: '30px', marginLeft: '30px', marginRight: '30px'}}>
                 <Outlet />
                 </Box>
                 <WidgetBar />

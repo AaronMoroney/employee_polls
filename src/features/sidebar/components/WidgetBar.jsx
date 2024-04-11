@@ -2,7 +2,7 @@ import {
     Paper, 
     Box
 } from "@mui/material";
-
+import { Engagement } from '../../engagement'
 import { Time, TodaysDate } from '../../calender'
 
 const Widgetbar = () => {
@@ -11,7 +11,6 @@ const Widgetbar = () => {
             <Paper
                 sx={{ 
                     height: '14vh',
-                    
                     marginTop: '30px', 
                     borderRadius: '30px', 
                     display: 'flex', 
@@ -34,6 +33,19 @@ const Widgetbar = () => {
                 }}
             >
                 <TodaysDate />
+            </Paper>
+            <Paper
+                sx={{ 
+                    height: '14vh',
+                    marginTop: '30px', 
+                    borderRadius: '30px', 
+                    display: 'flex', 
+                    flexDirection: 'column',
+                    justifyContent: 'center', 
+                    padding: '10px 10px 10px 15px'
+                }}
+            >
+               <Engagement />
             </Paper>
         </Box>
     );

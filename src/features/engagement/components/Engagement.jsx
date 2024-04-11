@@ -4,21 +4,27 @@ import {
 const Engagement = () => {
 
     const engagement = 90;
-    let icon;
+    let color;
 
     if(engagement < 33) {
-       icon =  '🔴'
-    } else if(engagement >33 &&  engagement < 66) {
-        icon = '🟠'
-    } else if(engagement > 66 && engagement < 95) {
-        icon = '🟢'
-    } else  {
-        icon = '🔥'
-    }
+       color =  'red'
+    } else if (engagement >33 &&  engagement < 66) {
+        color = 'orange'
+    } else {
+        color = 'green';
+    } 
     
     return (
         <>
-            <Typography sx={{fontWeight: 'bold'}}>{`${engagement}% Engagement ${icon}`}  </Typography>
+            <Typography >
+                engagement 
+            </Typography>
+            <Typography 
+                sx={{fontWeight: 'bold', color: {color}}}
+                variant='h3'
+            >
+                {engagement}%
+            </Typography>
         </>
     )
 }

@@ -1,0 +1,1 @@
+export {default as Poll} from './components/Poll';

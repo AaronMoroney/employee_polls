@@ -3,17 +3,17 @@ import { Typography } from '@mui/material';
 const TodaysDate = () => {
     const now = new Date();
     const currentDate = now.getDate(); 
-    const currentDay = now.toLocaleString('en-US', { weekday: 'short' });
+    const currentDay = now.toLocaleString('en-US', { weekday: 'long' }).toLocaleLowerCase();
 
     return (
         <>
             <Typography
-                variant='h5'
+          
             >
                 {currentDay}
             </Typography>
             <Typography
-                variant='h5'
+                variant='h2'
             >
                 {currentDate}
             </Typography>
