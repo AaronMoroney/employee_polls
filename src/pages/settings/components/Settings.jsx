@@ -1,7 +1,14 @@
+import { Typography } from '@mui/material'
+
 const Settings  = () => {
     return (
         <>
-            Settings
+            <Typography
+                variant='h4'
+            >
+                Settings
+            </Typography>
+            
         </>
     )
 }
