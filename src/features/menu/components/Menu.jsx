@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 import { 
     MenuItem, 
     MenuList,
@@ -11,14 +10,28 @@ import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 import AddIcon from '@mui/icons-material/Add';
 import LogoutIcon from '@mui/icons-material/Logout';
 import SettingsIcon from '@mui/icons-material/Settings';
+import HomeIcon from '@mui/icons-material/Home';
 
 const Menu = () => {
     return (
         <>
             <MenuList sx={{height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', width: '10vw'}}>
                 <div>
-                    {/* Link1 */}
-                    <Link to="/create" style={{ textDecoration: 'none', color: 'inherit'}}>
+                    <Link 
+                        to="/" 
+                        style={{ textDecoration: 'none', color: 'inherit'}}
+                    >
+                        <MenuItem>
+                            <ListItemIcon>
+                                <HomeIcon fontSize="small" />
+                            </ListItemIcon>
+                            <ListItemText>Home</ListItemText>
+                        </MenuItem>
+                    </Link>
+                    <Link 
+                        to="/create" 
+                        style={{ textDecoration: 'none', color: 'inherit'}}
+                    >
                         <MenuItem>
                             <ListItemIcon>
                                 <AddIcon fontSize="small" />
@@ -29,7 +42,7 @@ const Menu = () => {
                             </Typography>
                         </MenuItem>
                     </Link>
-                    {/* Link2 */}
+                    
                     <Link to="/leaderboard" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <MenuItem>
                             <ListItemIcon>
@@ -38,7 +51,7 @@ const Menu = () => {
                             <ListItemText>Leaderboard</ListItemText>
                         </MenuItem>
                     </Link>
-                    {/* Link3 */}
+           
                     <Link to="/settings" style={{ textDecoration: 'none', color: 'inherit' }}>
                         <MenuItem>
                             <ListItemIcon>

@@ -5,15 +5,15 @@ const Time = () => {
     const [bangkokTime, setBangkokTime] = useState('')
     
     const getTimeInTimeZone = (timeZone) => {
-    const now = new Date();
+        const now = new Date();
 
-    const timeFormatter = new Intl.DateTimeFormat('en-US', {
-        hour: '2-digit',
-        minute: '2-digit',
-        timeZone: timeZone,
-        hour12: false
-    });
-    return timeFormatter.format(now)
+        const timeFormatter = new Intl.DateTimeFormat('en-US', {
+            hour: '2-digit',
+            minute: '2-digit',
+            timeZone: timeZone,
+            hour12: false
+        });
+        return timeFormatter.format(now)
     };
 
     useEffect(() => {
@@ -28,11 +28,8 @@ const Time = () => {
     return (
         <>  
             <Box sx={{display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
- 
-                    <p className='time'>{`${icon} BKK: ${bangkokTime}`}</p>
-                    <p className='time'>{`${icon} BKK: ${bangkokTime}`}</p>
-                    <p className='time'>{`${icon} BKK: ${bangkokTime}`}</p>
-
+                <p className='time'>{`${icon} BKK: ${bangkokTime}`}</p>
+                <p className='time'>{`${icon} BKK: ${bangkokTime}`}</p>
             </Box>
         </>
     )

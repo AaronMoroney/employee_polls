@@ -1,7 +1,7 @@
 import { Card, Avatar, Box, CardContent, Typography,  Button } from '@mui/material'
-import HowToVoteIcon from '@mui/icons-material/HowToVote';
-
 import { useTheme } from '@mui/material/styles';
+import HowToVoteIcon from '@mui/icons-material/HowToVote';
+import { Link } from 'react-router-dom';
 
 const PollsCard = () => {
     let completed = false;
@@ -24,10 +24,14 @@ const PollsCard = () => {
                         />
                         <p>{`username · 66% engagment`}</p>
                     </Box>
-                    <Button>
+                    <Link
+                        to='questions/:5'
+                    >
+                        <Button>
                             <HowToVoteIcon />
                             VOTE
-                    </Button>
+                        </Button>
+                    </Link>
                 </Box>
                 {/* poll brief */}
                 <CardContent >

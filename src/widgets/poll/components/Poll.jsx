@@ -13,15 +13,13 @@ const Poll = () => {
 
     return (
         <>
-            <Box sx={{ borderLeft: '1px slategrey solid', borderRight: '1px slategrey solid',  height: '100%', padding: '0px 35px' }}>
-                <Box sx={{display: 'flex', flexDirextion: 'row', justifyContent: 'space-between', alignItems: 'baseline'}}>
-                    <Typography variant='h4' gutterBottom>Polls</Typography>
-                    <PollsSwitch
-                        onClick={handleIsFiltered}
-                    />
-                </Box>
-                <PollsCard />
+            <Box sx={{display: 'flex', flexDirextion: 'row', justifyContent: 'space-between', alignItems: 'baseline'}}>
+                <Typography variant='h4' gutterBottom>Polls</Typography>
+                <PollsSwitch
+                    onClick={handleIsFiltered}
+                />
             </Box>
+            <PollsCard />
         </>
     )
 }
