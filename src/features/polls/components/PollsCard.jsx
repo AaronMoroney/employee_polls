@@ -1,16 +1,28 @@
-import { Card, Avatar, Box, CardContent, Typography,  Button } from '@mui/material'
+import { 
+    Card, 
+    Avatar,
+    Box, 
+    CardContent, 
+    Typography,  
+    Button, 
+    Divider
+} from '@mui/material'
 import { useTheme } from '@mui/material/styles';
 import HowToVoteIcon from '@mui/icons-material/HowToVote';
+import LooksOneIcon from '@mui/icons-material/LooksOne';
+import LooksTwoIcon from '@mui/icons-material/LooksTwo';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+//add css properties into an Object: 
+
 const PollsCard = (props) => {
-    const { questions } = props; 
+    const { question } = props; 
 
     let completed = false;
     const theme = useTheme();
 
-    console.log(questions);
+    const votes = question.optionOne.votes.length + question.optionTwo.votes.length;
 
     return (
         <>
@@ -27,33 +39,51 @@ const PollsCard = (props) => {
                         <Avatar
                         sx={{ width: 30, height: 30, marginRight: '10px' }}
                         />
-                        <p>{`username · 66% engagment`}</p>
+                        <p>{`${question.author} · 66% engagment`}</p>
                     </Box>
-                    <Link
-                        to='questions/:5'
-                    >
-                        <Button>
-                            <HowToVoteIcon />
-                            VOTE
-                        </Button>
-                    </Link>
+                    <Typography>{ `${votes} ${votes > 1 ? 'votes' : 'vote'}`}</Typography>
                 </Box>
                 {/* poll brief */}
-                <CardContent >
+                <CardContent sx={{padding: '4px 16px'}} >
                     <Typography
-                        variant='h5'
                         gutterBottom
                     >
-                        Would you rather.. If I Used more shades of black? 
+                        Would you rather?
                     </Typography>
+                    <Divider sx={{marginBottom: '10px'}}/>
+                    <Box sx={{display: 'flex', alignItems: 'center'}}>
+                    <LooksOneIcon />
+                        <Typography
+                            variant='h6'
+                        >
+                            {question.optionOne.text}
+                        </Typography>
+                    </Box>
+                    <Box sx={{display: 'flex', alignItems: 'center'}}>
+                    <LooksTwoIcon />
+                        <Typography
+                            variant='h6'
+                        >
+                            {question.optionTwo.text}
+                        </Typography>
+                    </Box>
+                    {/* <Divider sx={{marginTop: '10px'}}/> */}
                 </CardContent>
+                <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-end'}}>
+                    <Link to='questions/:5' >
+                            <Button>
+                                <HowToVoteIcon />
+                                VOTE
+                            </Button>
+                    </Link>
+                </Box>
             </Card>
         </>
     )
 }
 
 PollsCard.propTypes = {
-    questions: PropTypes.object.isRequired
+    question: PropTypes.object.isRequired
 };
 
 export default PollsCard
