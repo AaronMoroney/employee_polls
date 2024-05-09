@@ -2,10 +2,15 @@ import { Card, Avatar, Box, CardContent, Typography,  Button } from '@mui/materi
 import { useTheme } from '@mui/material/styles';
 import HowToVoteIcon from '@mui/icons-material/HowToVote';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const PollsCard = () => {
+const PollsCard = (props) => {
+    const { questions } = props; 
+
     let completed = false;
     const theme = useTheme();
+
+    console.log(questions);
 
     return (
         <>
@@ -47,21 +52,8 @@ const PollsCard = () => {
     )
 }
 
+PollsCard.propTypes = {
+    questions: PropTypes.object.isRequired
+};
+
 export default PollsCard
-
-// The details of the poll are available at questions/:question_id.
-
-// When a poll is clicked on the home page, the following is shown:
-
-// the text “Would You Rather”
-// the avatar of the user who posted the polling question; and
-// the two options.
-
-// For answered polls, each of the two options contains the following:
-// the text of the option;
-// the number of people who voted for that option;
-// the percentage of people who voted for that option.
-
-// The option selected by the logged in user should be clearly marked.
-// When the user is logged in, the details of the poll are shown. If the user is logged out, he/she is asked to log in before before being able to access the poll.
-// The application asks the user to sign in and shows a 404 page if that poll does not exist. (In other words, if a user creates a poll and then the same or another user tries to access that poll by its url, the user should be asked to sign in and then be shown a 404 page. Please keep in mind that new polls will not be accessible at their url because of the way the backend is set up in this application.)

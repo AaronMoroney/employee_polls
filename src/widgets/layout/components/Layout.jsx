@@ -29,7 +29,7 @@ const Layout = () => {
                 />
                 <Box sx={{ width: '100%', marginTop: '30px', marginLeft: '30px', marginRight: '30px' }}>
                     <Box sx={{ borderLeft: '1px slategrey solid', borderRight: '1px slategrey solid',  height: '100%', padding: '0px 35px' }}>
-                    { location.pathname !== '/' || location.pathname !== '/create' &&
+                    { location.pathname !== '/' && location.pathname  !== '/create' &&
                         <ArrowBackIcon 
                             onClick={handleBack}
                         />

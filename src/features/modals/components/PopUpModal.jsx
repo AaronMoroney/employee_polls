@@ -1,8 +1,6 @@
 import  PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import { 
-  // useEffect, 
-  useMemo } from 'react';
+import { useMemo } from 'react';
 import { 
   Box, 
   Typography, 
@@ -11,11 +9,11 @@ import {
   useTheme,
 } from '@mui/material';
 import { Close } from '@mui/icons-material';
+import ModalCard from './ModalCard';
 
 const PopUpModal = ({ openModal, setOpenModal}) => {
   const theme = useTheme();
 
-  // extract to helper
   const style = useMemo(() => ({
     position: 'absolute',
     top: '50%',
@@ -36,23 +34,26 @@ const PopUpModal = ({ openModal, setOpenModal}) => {
     navigate('/');
   }
 
-
-  // MAKE SURE TO ADD AS A WIDGET
   return (
     <>
       <Modal
         open={openModal}
       >
         <Box sx={style}>
-          <Button
-            onClick={handleClose}
-          >
-            <Close />
-            CLOSE
-          </Button>
-           <Typography  variant="h6" component="h2">
-             Text in a modal
-           </Typography>
+          <Box sx={{display: 'flex',flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+            <Typography
+              gutterBottom
+            >
+              Would you rather?
+            </Typography>
+            <Button
+              onClick={handleClose}
+            >
+              <Close />
+              CLOSE
+            </Button>
+          </Box>
+          <ModalCard/>
          </Box>
       </Modal>
     </>
