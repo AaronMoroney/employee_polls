@@ -7,13 +7,7 @@ import { Question } from '../../pages/question'
 import { Settings } from '../../pages/settings'
 import { Create } from '../../pages/create'
 import { Layout } from '../../widgets/layout'
-import { Box} from '@mui/material'
-
-// REVIEW ALL WIDGETS!
-// REVIEW ALL PAGES!
-// REVIEW ALL FEATURES!
-// **for: helpers, hooks, correct structure, unneccessary comments**
-
+import { Box } from '@mui/material'
 
 function App() {
   return (

@@ -1,11 +1,20 @@
-import { useState } from 'react'
-import { Box, Typography } from '@mui/material'
+import { useState, useEffect } from 'react';
+import { Box, Typography } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { getQuestions } from '../../../containers/posts/actions';
 import { PollsSwitch } from '../../../features/buttons'
 import PollsCard from '../../../features/polls/components/PollsCard';
 
-
 const Poll = () => {
     const [isFiltered, setIsFiltered] = useState(true);
+
+    const dispatch = useDispatch();
+    const questions = useSelector(state => state.questions);
+
+    useEffect(() => {
+        dispatch(getQuestions());
+    }, [dispatch]);
 
     const handleIsFiltered = () => {
         setIsFiltered(!isFiltered)
@@ -19,9 +28,11 @@ const Poll = () => {
                     onClick={handleIsFiltered}
                 />
             </Box>
-            <PollsCard />
+            <PollsCard 
+                questions={questions} 
+            />
         </>
     )
 }
 
-export default Poll
+export default Poll;
