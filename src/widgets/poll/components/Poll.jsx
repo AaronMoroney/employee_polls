@@ -28,9 +28,14 @@ const Poll = () => {
                     onClick={handleIsFiltered}
                 />
             </Box>
-            <PollsCard 
-                questions={questions} 
-            />
+            {Object.values(questions).map((question) => {
+                return (
+                    <PollsCard 
+                        question={question}
+                        key={question.id}
+                    />
+                )  
+            })}
         </>
     )
 }
