@@ -29,7 +29,6 @@ const Time = () => {
         <>  
             <Box sx={{display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
                 <p className='time'>{`${icon} BKK: ${bangkokTime}`}</p>
-                <p className='time'>{`${icon} BKK: ${bangkokTime}`}</p>
             </Box>
         </>
     )

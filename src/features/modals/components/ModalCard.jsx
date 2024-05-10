@@ -10,10 +10,24 @@ import {
 } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 
+const styles = {
+    modal__parent: {
+        height: '200px',
+        display: 'flex', 
+        flexDirection: 'column', 
+        justifyContent: 'space-around'
+    }, 
+    question__container : {
+        display: 'flex', 
+        flexDirection: 'row', 
+        justifyContent: 'space-around'
+    }
+}
+
 const ModalCard = () => {
     return (
         <>
-            <Box sx={{height: '200px', display: 'flex', flexDirection: 'column', justifyContent: 'space-around'}}>
+            <Box sx={styles.modal__parent}>
                 <FormControl fullWidth >
                     <InputLabel htmlFor="outlined-adornment-amount-1">Option 1</InputLabel>
                     <OutlinedInput
@@ -21,7 +35,7 @@ const ModalCard = () => {
                         label="option1"
                     />
                 </FormControl>
-                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
+                <Box sx={styles.question__container}>
                     <Divider/>
                     <Typography>
                         OR

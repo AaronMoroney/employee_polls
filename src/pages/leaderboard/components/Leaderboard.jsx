@@ -9,6 +9,20 @@ import {
     Box, 
 } from '@mui/material'
 
+const styles = {
+    listItem: {
+        display: 'flex', 
+        flexDirection: 'row', 
+        alignItems: 'center', 
+        justifyContent:'space-between'
+    }, 
+    position: {
+        display: 'flex', 
+        flexDirection: 'row', 
+        alignItems: 'center' 
+    }
+}
+
 const Leaderboard = () => {
     const engagement = 92;
     let color;
@@ -30,9 +44,9 @@ const Leaderboard = () => {
             </Typography>
             <List sx={{ width: '100%' }}>
             <Divider />
-                <ListItem sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent:'space-between'}}>
+                <ListItem sx={styles.listItem}>
                     <ListItemAvatar>
-                        <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }} >
+                        <Box sx={styles.position} >
                             <Typography 
                                 variant='h4'
                             >

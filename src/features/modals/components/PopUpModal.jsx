@@ -27,6 +27,15 @@ const PopUpModal = ({ openModal, setOpenModal}) => {
     backgroundColor: theme.palette.background.paper
   }), [theme]);
 
+  const styles = {
+    modal__card__parent : {
+      display: 'flex',
+      flexDirection: 'row', 
+      alignItems: 'center', 
+      justifyContent: 'space-between'
+    }
+  }
+
   const navigate = useNavigate();
 
   const handleClose = () => {
@@ -40,7 +49,7 @@ const PopUpModal = ({ openModal, setOpenModal}) => {
         open={openModal}
       >
         <Box sx={style}>
-          <Box sx={{display: 'flex',flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+          <Box sx={styles.modal__card__parent}>
             <Typography
               gutterBottom
             >

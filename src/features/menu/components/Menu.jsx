@@ -12,14 +12,28 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import SettingsIcon from '@mui/icons-material/Settings';
 import HomeIcon from '@mui/icons-material/Home';
 
+const styles = {
+    MenuList :{
+        height: '100%', 
+        display: 'flex', 
+        flexDirection: 'column', 
+        justifyContent: 'space-between', 
+        width: '10vw'
+    },
+    linkStyle :{
+        textDecoration: 'none', 
+        color: 'inherit'
+    }
+}
+
 const Menu = () => {
     return (
         <>
-            <MenuList sx={{height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', width: '10vw'}}>
+            <MenuList sx={styles.MenuList}>
                 <div>
                     <Link 
                         to="/" 
-                        style={{ textDecoration: 'none', color: 'inherit'}}
+                        style={styles.linkStyle}
                     >
                         <MenuItem>
                             <ListItemIcon>
@@ -30,7 +44,7 @@ const Menu = () => {
                     </Link>
                     <Link 
                         to="/create" 
-                        style={{ textDecoration: 'none', color: 'inherit'}}
+                        style={styles.linkStyle}
                     >
                         <MenuItem>
                             <ListItemIcon>
@@ -43,7 +57,7 @@ const Menu = () => {
                         </MenuItem>
                     </Link>
                     
-                    <Link to="/leaderboard" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <Link to="/leaderboard" style={styles.linkStyle}>
                         <MenuItem>
                             <ListItemIcon>
                                 <LeaderboardIcon fontSize="small" />
@@ -52,7 +66,7 @@ const Menu = () => {
                         </MenuItem>
                     </Link>
            
-                    <Link to="/settings" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <Link to="/settings" style={styles.linkStyle}>
                         <MenuItem>
                             <ListItemIcon>
                                 <SettingsIcon />
