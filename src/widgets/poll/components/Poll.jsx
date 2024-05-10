@@ -6,6 +6,15 @@ import { getQuestions } from '../../../containers/posts/actions';
 import { PollsSwitch } from '../../../features/buttons'
 import PollsCard from '../../../features/polls/components/PollsCard';
 
+const styles = {
+    polls__page__header: {
+        display: 'flex', 
+        flexDirextion: 'row', 
+        justifyContent: 'space-between', 
+        alignItems: 'baseline'
+    }
+};
+
 const Poll = () => {
     const [isFiltered, setIsFiltered] = useState(true);
 
@@ -22,7 +31,7 @@ const Poll = () => {
 
     return (
         <>
-            <Box sx={{display: 'flex', flexDirextion: 'row', justifyContent: 'space-between', alignItems: 'baseline'}}>
+            <Box sx={styles.polls__page__header}>
                 <Typography variant='h4' gutterBottom>Polls</Typography>
                 <PollsSwitch
                     onClick={handleIsFiltered}

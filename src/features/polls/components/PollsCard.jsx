@@ -14,7 +14,34 @@ import LooksTwoIcon from '@mui/icons-material/LooksTwo';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-//add css properties into an Object: 
+const styles = {
+    PollCard: {
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'space-between'  
+    },
+    PollCard__header__container: {
+        display: 'flex', 
+        alignItems: 'center'
+    },
+    avatar: {
+        width: 30, 
+        height: 30, 
+        marginRight: '10px' 
+    },
+    card__content: {
+        padding: '4px 16px'
+    }, 
+    box__option : {
+        display: 'flex', 
+        alignItems: 'center'
+    },
+    box__vote__button : {
+        display: 'flex', 
+        flexDirection: 'row', 
+        justifyContent: 'flex-end'
+    }
+};
 
 const PollsCard = (props) => {
     const { question } = props; 
@@ -22,36 +49,40 @@ const PollsCard = (props) => {
     let completed = false;
     const theme = useTheme();
 
+    //calculate votes totals
     const votes = question.optionOne.votes.length + question.optionTwo.votes.length;
+
+    const DynamicStyles = {
+        PollCard__header: {
+            padding: '1% 2%', 
+            marginBottom: '2%', 
+            backgroundColor: completed ? theme.palette.background.completedPaper : theme.palette.background.paper
+        },
+    };
 
     return (
         <>
             <Card 
-                sx={{ 
-                    padding: '1% 2%', 
-                    marginBottom: '2%', 
-                    backgroundColor: completed ? theme.palette.background.completedPaper : theme.palette.background.paper
-                }}
+                sx={[styles.PollCard__header, DynamicStyles.PollCard__header]}
                 variant='outlined'
             >
-                <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'  }}>
-                    <Box sx={{display: 'flex', alignItems: 'center'}}>
+                <Box sx={styles.PollCard}>
+                    <Box sx={styles.PollCard__header__container}>
                         <Avatar
-                        sx={{ width: 30, height: 30, marginRight: '10px' }}
+                            sx={styles.avatar}
                         />
                         <p>{`${question.author} · 66% engagment`}</p>
                     </Box>
                     <Typography>{ `${votes} ${votes > 1 ? 'votes' : 'vote'}`}</Typography>
                 </Box>
-                {/* poll brief */}
-                <CardContent sx={{padding: '4px 16px'}} >
+                <CardContent sx={styles.card__content} >
                     <Typography
                         gutterBottom
                     >
                         Would you rather?
                     </Typography>
                     <Divider sx={{marginBottom: '10px'}}/>
-                    <Box sx={{display: 'flex', alignItems: 'center'}}>
+                    <Box sx={styles.box__option}>
                     <LooksOneIcon />
                         <Typography
                             variant='h6'
@@ -59,7 +90,7 @@ const PollsCard = (props) => {
                             {question.optionOne.text}
                         </Typography>
                     </Box>
-                    <Box sx={{display: 'flex', alignItems: 'center'}}>
+                    <Box sx={styles.box__option}>
                     <LooksTwoIcon />
                         <Typography
                             variant='h6'
@@ -67,9 +98,8 @@ const PollsCard = (props) => {
                             {question.optionTwo.text}
                         </Typography>
                     </Box>
-                    {/* <Divider sx={{marginTop: '10px'}}/> */}
                 </CardContent>
-                <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-end'}}>
+                <Box sx={styles.box__vote__button}>
                     <Link to='questions/:5' >
                             <Button>
                                 <HowToVoteIcon />
