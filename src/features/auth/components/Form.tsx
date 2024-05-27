@@ -1,13 +1,18 @@
-import PropTypes from 'prop-types';
+
 
 import {
     FormControl,
     TextField, 
     Box
 } from '@mui/material';
+import React from 'react';
 
 
-const Form = ({ isNewMember }) => {
+interface FormProps {
+    isNewMember: Boolean
+}
+
+const Form: React.FC<FormProps> = ({ isNewMember }) => {
     // const [showPassword, setShowPassword] = useState(false);
 
     // const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -40,9 +45,5 @@ const Form = ({ isNewMember }) => {
         </>
     )
 }
-
-Form.propTypes = {
-    isNewMember: PropTypes.bool.isRequired,
-};
 
 export default Form

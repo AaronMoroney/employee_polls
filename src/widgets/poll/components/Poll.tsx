@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Box, Typography } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
+import { ThunkDispatch } from 'redux-thunk';
 
-import { getQuestions } from '../../../containers/posts/actions';
+import { getQuestions } from '../../../containers/questions/actions';
 import { PollsSwitch } from '../../../features/buttons'
 import PollsCard from '../../../features/polls/components/PollsCard';
+import { AppState } from '../../../../types';
+import { QuestionsAction } from '../../../containers/questions/types';
 
 const styles = {
     polls__page__header: {
@@ -18,17 +21,22 @@ const styles = {
 const Poll = () => {
     const [isFiltered, setIsFiltered] = useState(true);
 
-    const dispatch = useDispatch();
-    const questions = useSelector(state => state.questions);
-
+    const dispatch = useDispatch<ThunkDispatch<{}, {}, QuestionsAction>>();
+   
     useEffect(() => {
         dispatch(getQuestions());
     }, [dispatch]);
+
+    const questions = useSelector((state: AppState) => state.questions.questions);
 
     const handleIsFiltered = () => {
         setIsFiltered(!isFiltered)
     }
 
+    useEffect(() => {
+        console.log(questions)
+    })
+   
     return (
         <>
             <Box sx={styles.polls__page__header}>
@@ -37,11 +45,12 @@ const Poll = () => {
                     onClick={handleIsFiltered}
                 />
             </Box>
-            {Object.values(questions).map((question) => {
+            
+            {(questions ? Object.keys(questions) :[]).map((question) => {
                 return (
                     <PollsCard 
-                        question={question}
-                        key={question.id}
+                        key={question}
+                        question={questions[question]}
                     />
                 )  
             })}

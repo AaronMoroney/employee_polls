@@ -34,7 +34,6 @@ const Auth = () => {
                     )}
                 </Box>
                 <p>Note: This is a demo app, so feel free to auto-signin with a pre-made user</p>
-
             </Box>
             
         </>

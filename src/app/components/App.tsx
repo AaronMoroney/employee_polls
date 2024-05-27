@@ -13,7 +13,7 @@ function App() {
   return (
     <Box sx={{padding: '2.5% 5%'}}>
       <Routes>
-        <Route path='/login' element={<Auth />} />
+        <Route path='/test' element={<Auth />} />
         <Route element={<Layout />}>
           <Route path='/' element={<Home />} />
           <Route path='questions/:question_id' element={<Question />} />

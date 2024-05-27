@@ -1,4 +1,4 @@
-import  PropTypes from 'prop-types';
+
 import { useNavigate } from 'react-router-dom';
 import { useMemo } from 'react';
 import { 
@@ -11,7 +11,12 @@ import {
 import { Close } from '@mui/icons-material';
 import ModalCard from './ModalCard';
 
-const PopUpModal = ({ openModal, setOpenModal}) => {
+interface PopUpModalProps {
+  openModal: boolean;
+  setOpenModal: (open: boolean) => void;
+}
+
+const PopUpModal: React.FC<PopUpModalProps> = ({ openModal, setOpenModal}) => {
   const theme = useTheme();
 
   const style = useMemo(() => ({
@@ -70,8 +75,3 @@ const PopUpModal = ({ openModal, setOpenModal}) => {
 }
 
 export default PopUpModal
-
-PopUpModal.propTypes = {
-  openModal: PropTypes.bool,
-  setOpenModal: PropTypes.func.isRequired
-}

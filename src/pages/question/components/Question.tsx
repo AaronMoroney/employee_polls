@@ -7,7 +7,7 @@ const Question = () => {
         <>
             <Typography
                 variant='h4'
-                marginBottom
+                marginBottom={2}
             >
                 Question
             </Typography>
