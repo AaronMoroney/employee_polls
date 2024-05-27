@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
-import { _getUsers } from '../../../data/_DATA';
+import { useEffect } from 'react';
+import { ThunkDispatch } from 'redux-thunk';
+import { useSelector } from 'react-redux';
 import { 
     List, 
     ListItem, 
@@ -10,18 +11,19 @@ import {
     Avatar
 } from '@mui/material';
 
+import { useDispatch } from 'react-redux';
+import { getUsers } from '../../../containers/users/actions';
+import { UsersAction, User } from '../../../containers/users/types';
+import { AppState } from '../../../../types';
+
 const Dropdown = () => {
-    const [users, setUsers] = useState([]);
+    const dispatch = useDispatch<ThunkDispatch<{}, {}, UsersAction>>();
 
     useEffect(() => {
-        _getUsers().then(data => {
-            setUsers(data);
-        })
-    }, []);
+        dispatch(getUsers());
+    }, [dispatch]);
 
-    useEffect(() => {
-        console.log(users);
-    })
+    const users = useSelector((state: AppState) => state.users.users);
 
     return (
         <>
@@ -30,7 +32,7 @@ const Dropdown = () => {
                 dense 
                 sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
             >
-                {Object.keys(users).map((userId) => {
+                {(users ? Object.keys(users) : []).map((userId) => {
                     const user = users[userId]
                     const labelId = `checkbox-list-secondary-label-${userId}`;
                     return (

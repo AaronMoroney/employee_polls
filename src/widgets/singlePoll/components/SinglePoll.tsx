@@ -1,11 +1,8 @@
-import { PollsCard } from '../../../features/polls'
-
 const SinglePoll = () => {
     return (
         <>
-            <PollsCard />
+           <p>test</p>
         </>
-
     )   
 }
 

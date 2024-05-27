@@ -12,7 +12,9 @@ import HowToVoteIcon from '@mui/icons-material/HowToVote';
 import LooksOneIcon from '@mui/icons-material/LooksOne';
 import LooksTwoIcon from '@mui/icons-material/LooksTwo';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import React from 'react';
+
+import { Questions} from '../../../containers/questions/types';
 
 const styles = {
     PollCard: {
@@ -22,7 +24,8 @@ const styles = {
     },
     PollCard__header__container: {
         display: 'flex', 
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'space-between'
     },
     avatar: {
         width: 30, 
@@ -40,17 +43,23 @@ const styles = {
         display: 'flex', 
         flexDirection: 'row', 
         justifyContent: 'flex-end'
-    }
+    },
 };
 
-const PollsCard = (props) => {
+interface PollsCardsProps {
+    question: Questions;
+}
+
+const PollsCard: React.FC<PollsCardsProps> = (props) => {
     const { question } = props; 
 
     let completed = false;
     const theme = useTheme();
 
+    console.log(question);
+
     //calculate votes totals
-    const votes = question.optionOne.votes.length + question.optionTwo.votes.length;
+    // const votes = question.optionOne.votes.length + question.optionTwo.votes.length;
 
     const DynamicStyles = {
         PollCard__header: {
@@ -63,7 +72,7 @@ const PollsCard = (props) => {
     return (
         <>
             <Card 
-                sx={[styles.PollCard__header, DynamicStyles.PollCard__header]}
+                sx={[ DynamicStyles.PollCard__header]}
                 variant='outlined'
             >
                 <Box sx={styles.PollCard}>
@@ -73,7 +82,7 @@ const PollsCard = (props) => {
                         />
                         <p>{`${question.author} · 66% engagment`}</p>
                     </Box>
-                    <Typography>{ `${votes} ${votes > 1 ? 'votes' : 'vote'}`}</Typography>
+                    {/* <Typography>{ `${votes} ${votes > 1 ? 'votes' : 'vote'}`}</Typography> */}
                 </Box>
                 <CardContent sx={styles.card__content} >
                     <Typography
@@ -111,9 +120,5 @@ const PollsCard = (props) => {
         </>
     )
 }
-
-PollsCard.propTypes = {
-    question: PropTypes.object.isRequired
-};
 
 export default PollsCard

@@ -4,7 +4,7 @@ import { Box } from '@mui/material'
 const Time = () => {
     const [bangkokTime, setBangkokTime] = useState('')
     
-    const getTimeInTimeZone = (timeZone) => {
+    const getTimeInTimeZone = (timeZone: string) => {
         const now = new Date();
 
         const timeFormatter = new Intl.DateTimeFormat('en-US', {

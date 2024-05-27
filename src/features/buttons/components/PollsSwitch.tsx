@@ -3,8 +3,11 @@ import {
 } from '@mui/material'
 import { PollsStatusSwitch } from '../style/PollsStatusStyle'
 
+interface PollSwitchProps {
+    onClick: () => void; 
+}
 
-const PollsSwitch = () => {
+const PollsSwitch: React.FC<PollSwitchProps> = () => {
     return (
         <>
             <FormControlLabel
