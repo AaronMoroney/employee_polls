@@ -6,7 +6,7 @@ import { ThunkDispatch } from 'redux-thunk';
 import { getQuestions } from '../../../containers/questions/actions';
 import { PollsSwitch } from '../../../features/buttons'
 import PollsCard from '../../../features/polls/components/PollsCard';
-import { AppState } from '../../../../types';
+import { AppState } from '../../../app/providers/with-redux/types';
 import { QuestionsAction } from '../../../containers/questions/types';
 
 const styles = {

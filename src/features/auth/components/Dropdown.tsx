@@ -14,7 +14,7 @@ import {
 import { useDispatch } from 'react-redux';
 import { getUsers } from '../../../containers/users/actions';
 import { UsersAction, User } from '../../../containers/users/types';
-import { AppState } from '../../../../types';
+import { AppState } from '../../../app/providers/with-redux/types';
 
 const Dropdown = () => {
     const dispatch = useDispatch<ThunkDispatch<{}, {}, UsersAction>>();
