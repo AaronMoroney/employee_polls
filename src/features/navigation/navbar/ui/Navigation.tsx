@@ -26,6 +26,7 @@ const styles = {
         marginLeft: '10px' 
     }
 }
+
 const Navigation = () => {
     return (
         <Paper

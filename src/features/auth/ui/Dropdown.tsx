@@ -13,7 +13,7 @@ import {
 
 import { useDispatch } from 'react-redux';
 import { getUsers } from '../../../entities/users/model/actions';
-import { UsersAction, User } from '../../../entities/users/model/types';
+import { UsersAction } from '../../../entities/users/model/types';
 import { AppState } from '../../../app/providers/with-redux/types';
 
 const Dropdown = () => {

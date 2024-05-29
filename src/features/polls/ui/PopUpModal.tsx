@@ -1,4 +1,3 @@
-
 import { useNavigate } from 'react-router-dom';
 import { useMemo } from 'react';
 import { 
@@ -9,6 +8,7 @@ import {
   useTheme,
 } from '@mui/material';
 import { Close } from '@mui/icons-material';
+
 import ModalCard from './ModalCard';
 
 interface PopUpModalProps {

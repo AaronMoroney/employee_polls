@@ -1,3 +1,4 @@
+import React from 'react';
 import { 
     Card, 
     Avatar,
@@ -12,7 +13,6 @@ import HowToVoteIcon from '@mui/icons-material/HowToVote';
 import LooksOneIcon from '@mui/icons-material/LooksOne';
 import LooksTwoIcon from '@mui/icons-material/LooksTwo';
 import { Link } from 'react-router-dom';
-import React from 'react';
 
 import { Questions} from '../../../entities/questions/model/types';
 
