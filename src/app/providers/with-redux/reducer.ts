@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import { questionsReducer } from '../../../containers/questions/reducer';
-import { usersReducer } from '../../../containers/users/reducer';
+import { questionsReducer } from '../../../entities/questions/model/reducer';
+import { usersReducer } from '../../../entities/users/model/reducer';
 
 const rootReducer = combineReducers({
   questions: questionsReducer,

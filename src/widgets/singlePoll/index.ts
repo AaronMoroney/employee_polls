@@ -1,1 +1,1 @@
-export { default as SinglePoll } from './components/SinglePoll'
+export { default as SinglePoll } from './ui/SinglePoll'

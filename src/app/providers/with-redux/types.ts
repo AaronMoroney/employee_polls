@@ -1,7 +1,7 @@
-import { Questions } from "../../../containers/questions/types"
-import { UsersState } from "../../../containers/users/types"
+import { QuestionsState } from "../../../entities/questions/model/types"
+import { UsersState } from "../../../entities/users/model/types"
 
 export interface AppState {
-    questions: Questions
+    questions: QuestionsState
     users: UsersState
 } 

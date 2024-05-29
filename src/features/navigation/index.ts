@@ -1,1 +1,1 @@
-export {default as Navigation} from './components/Navigation';
+export {default as Menu} from './sidebar/components/Menu';

@@ -1,1 +1,1 @@
-export {default as PollsCard } from './components/PollsCard'
+export {default as PollsCard } from './ui/PollsCard'
