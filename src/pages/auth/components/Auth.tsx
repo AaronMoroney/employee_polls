@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { 
+    Box, 
+    Link, 
+    Button 
+} from '@mui/material';
 
-import '../../../css/index.css';
 import { Form } from '../../../features/auth';
 import { Dropdown } from '../../../features/auth';
-import { Box, Link, Button } from '@mui/material';
 
 const Auth = () => {
     const [isNewMember, setIsNewMember] = useState(true);
