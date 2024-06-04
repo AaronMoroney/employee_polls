@@ -5,8 +5,6 @@ import {
     Box
 } from '@mui/material';
 
-
-
 interface FormProps {
     isNewMember: Boolean
 }

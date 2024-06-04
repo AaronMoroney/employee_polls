@@ -3,8 +3,8 @@ import {
     Box
 } from "@mui/material";
 
-import { Engagement } from "../../../engagement";
-import { Time, TodaysDate } from "../../../calender";
+import { Engagement } from "../../engagement";
+import { Time, TodaysDate } from "../../calender";
 
 const Widgetbar = () => {
     return (

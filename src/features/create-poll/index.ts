@@ -1,1 +1,0 @@
-export { default as ModalCard } from '../polls/ui/ModalCard';

@@ -1,12 +1,10 @@
 
 import { Outlet } from 'react-router-dom';
 import { Box } from '@mui/material';
-import { Navigation } from '../../../features/navigation/navbar';
 import { useNavigate, useLocation } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-import { Sidebar } from '../../../features/navigation/sidebar';
-import { WidgetBar } from '../../../features/navigation/sidebar';
+import { Sidebar, WidgetBar, Navigation } from '../../../features/navigation';
 import { ThemeToggle } from '../../../features/theme'
 
 const styles = {

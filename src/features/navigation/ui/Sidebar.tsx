@@ -2,7 +2,7 @@ import {
     Paper, 
 } from "@mui/material";
 
-import { Menu } from "@mui/icons-material";
+import Menu  from './Menu'
     
 const Sidebar = () => {
     return (
