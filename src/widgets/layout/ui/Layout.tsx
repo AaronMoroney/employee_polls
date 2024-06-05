@@ -22,7 +22,7 @@ const styles = {
     layout__content__container: {
         borderLeft: '1px slategrey solid', 
         borderRight: '1px slategrey solid',  
-        height: '100%', 
+        height: '70vh', 
         padding: '0px 35px' 
     }
 }

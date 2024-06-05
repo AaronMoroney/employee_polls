@@ -11,7 +11,7 @@ import { Box } from '@mui/material'
 
 function App() {
   return (
-    <Box sx={{padding: '2.5% 5%'}}>
+    <Box sx={{padding: '0.25% 5%'}}>
       <Routes>
         <Route path='/test' element={<Auth />} />
         <Route element={<Layout />}>
