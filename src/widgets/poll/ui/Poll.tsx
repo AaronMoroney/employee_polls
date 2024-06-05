@@ -15,7 +15,17 @@ const styles = {
         flexDirextion: 'row', 
         justifyContent: 'space-between', 
         alignItems: 'baseline'
-    }
+    },
+    polls__page__container: {
+        height: '95%',
+        overflow: 'overlay',
+        '&::-webkit-scrollbar': {
+            width: '1px',
+        },
+        '&::-webkit-scrollbar-track': {
+            background: 'transparent', 
+        },
+    },
 };
 
 const Poll = () => {
@@ -41,15 +51,16 @@ const Poll = () => {
                     onClick={handleIsFiltered}
                 />
             </Box>
-            
-            {(questions ? Object.keys(questions) :[]).map((question) => {
-                return (
-                    <PollsCard 
-                        key={question}
-                        question={questions[question]}
-                    />
-                )  
-            })}
+            <Box sx={styles.polls__page__container}>
+                {(questions ? Object.keys(questions) :[]).map((question) => {
+                    return (
+                        <PollsCard 
+                            key={question}
+                            question={questions[question]}
+                        />
+                    )  
+                })}
+            </Box>
         </>
     )
 }
