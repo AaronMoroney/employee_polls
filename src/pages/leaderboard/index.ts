@@ -1,1 +1,1 @@
-export { default as Leaderboard} from './components/Leaderboard'
+export { default as Leaderboard} from './components/LeaderPage'

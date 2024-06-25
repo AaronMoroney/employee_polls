@@ -2,17 +2,13 @@ export type UserAnswers = {
     [key: number]: 'optionOne' | 'optionTwo'
 }
 
-export type UserQuestions = {
-    questions: string[]
-}
-
 export interface User {
     id: string,
     password: string,
     name: string,
     avatarURL: null,
     answers: UserAnswers,
-    questions: UserQuestions
+    questions: string[]
 }
 
 export interface UsersState {
