@@ -32,8 +32,6 @@ const Leaderboard = () => {
 
     const users = useSelector((state: AppState) => state.users.users);
 
-    console.log(users);
-    
     return (
         <>
             <Box sx = {styles.leader__page__container}>

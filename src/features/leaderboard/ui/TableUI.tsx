@@ -10,6 +10,7 @@ import {
 
 import {  User } from '../../../entities/users/model/types';
 import TableCells from './TableCells';
+import { findUserPosition } from '../../../shared/helpers/leaderboard';
 
 interface TableProps {
     users: Record<string, User>;
@@ -36,6 +37,11 @@ const styles = {
 const TableUI: React.FC<TableProps> = (props) => {
     const { users } = props;
 
+    const POSITION = 1
+    let positionedUsers: User[] = [];
+
+    positionedUsers = users && findUserPosition(users);
+    
     return (
         <>
             <TableContainer >
@@ -49,18 +55,22 @@ const TableUI: React.FC<TableProps> = (props) => {
                         </TableRow>
                     </TableHead>
                     <TableBody >
-                        {users && Object.keys(users).map((userId) => {
-                            const user = users?.[userId];
+                        {positionedUsers && Object.keys(positionedUsers).map((userId, index) => {
+                            // @ts-ignore
+                            // map method turns the user id into a string, rathe than a number
+                            const user = positionedUsers?.[userId];
+                            const currentPosition = POSITION + index 
+
                             return (
                                 <TableRow
                                     key={user.id}
                                 >
                                     <TableCells
-                                        key={user.id}
-                                        avatar={user.avatarURL}
                                         user={user.name}
                                         questions={user.questions}
                                         answers={user.answers}
+                                        position={currentPosition}
+                                        avatar={user.avatarURL}
                                     />
                                 </TableRow>
                             )
