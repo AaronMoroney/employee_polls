@@ -1,6 +1,4 @@
-import { 
-    Paper, 
-} from "@mui/material";
+import { Paper } from "@mui/material";
 
 import Menu  from './Menu'
     

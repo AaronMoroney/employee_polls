@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material'
 
-import { SinglePoll } from '../../../widgets/singlePoll';
+import { SinglePoll } from 'widgets/singlePoll';
 
 const Question = () => { 
     return (

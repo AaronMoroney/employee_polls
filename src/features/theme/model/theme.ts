@@ -8,6 +8,7 @@ export const darkTheme: Theme = createTheme({
     mode: 'dark',
     background: {
       paper: '#23262f',
+      //@ts-ignore
       completedPaper: '#2b6e6233',
     },
   },

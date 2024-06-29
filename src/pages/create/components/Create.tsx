@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import PopUpModal from '../../../features/polls/ui/PopUpModal';
-import { Poll } from '../../../widgets/poll';
+import PopUpModal from 'features/polls/ui/PopUpModal';
+import { Poll } from 'widgets/poll';
 
 const Create = () => {
     const [ openModal, setOpenModal] = useState(true);

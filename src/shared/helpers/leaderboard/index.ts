@@ -1,4 +1,4 @@
-import { User } from "../../../entities/users/model/types";
+import { User } from 'entities/users/model/types';
 
 export const getUserEngagementScore = (answers: {}, questions: string[]) => {
     const questionsTally = questions.length;

@@ -1,4 +1,4 @@
-import { Poll } from '../../../widgets/poll';
+import { Poll } from 'widgets/poll';
 
 const Home = () => {
     return (

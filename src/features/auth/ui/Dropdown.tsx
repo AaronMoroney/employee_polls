@@ -12,9 +12,9 @@ import {
 } from '@mui/material';
 
 import { useDispatch } from 'react-redux';
-import { getUsers } from '../../../entities/users/model/actions';
-import { UsersAction } from '../../../entities/users/model/types';
-import { AppState } from '../../../app/providers/with-redux/types';
+import { getUsers } from 'entities/users/model/actions';
+import { UsersAction } from 'entities/users/model/types';
+import { AppState } from 'app/providers/with-redux/types';
 
 const Dropdown = () => {
     const dispatch = useDispatch<ThunkDispatch<{}, {}, UsersAction>>();

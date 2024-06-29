@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 
-import  Leaderboard  from '../../../widgets/Leaderboard/Leaderboard'
+import  Leaderboard  from 'widgets/Leaderboard/Leaderboard'
 
 const LeaderPage = () => {
     return (
