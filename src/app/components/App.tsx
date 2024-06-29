@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
-
-import { Auth } from '../../pages/auth';
-import { Home } from '../../pages/home';
-import { Leaderboard } from  '../../pages/leaderboard'
-import { Question } from '../../pages/question'
-import { Settings } from '../../pages/settings'
-import { Create } from '../../pages/create'
-import { Layout } from '../../widgets/layout'
 import { Box } from '@mui/material'
+
+import { Auth } from 'pages/auth';
+import { Home } from 'pages/home';
+import { Leaderboard } from  'pages/leaderboard'
+import { Question } from 'pages/question'
+import { Settings } from 'pages/settings'
+import { Create } from 'pages/create'
+import { Layout } from 'widgets/layout'
 
 function App() {
   return (

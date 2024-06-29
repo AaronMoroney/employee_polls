@@ -14,7 +14,7 @@ import LooksOneIcon from '@mui/icons-material/LooksOne';
 import LooksTwoIcon from '@mui/icons-material/LooksTwo';
 import { Link } from 'react-router-dom';
 
-import { Questions} from '../../../entities/questions/model/types';
+import { Questions} from 'entities/questions/model/types';
 
 const styles = {
     PollCard: {

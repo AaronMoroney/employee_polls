@@ -4,7 +4,7 @@ import {
     Typography,
 } from "@mui/material";
 
-import { UserAnswers } from "../../../entities/users/model/types";
+import { UserAnswers } from "entities/users/model/types";
 
 interface CellsProp {
     user: string;

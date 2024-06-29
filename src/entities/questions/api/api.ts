@@ -1,5 +1,5 @@
-import { URL } from "../../../shared/constants/URL";
-import { fetchRequest } from "../../../shared/api/utils";
+import { URL } from "shared/constants/URL";
+import { fetchRequest } from "shared/api/utils";
 
 export const getQuestionsReq = () => {
   const requestUrl = `${URL}/questions`;

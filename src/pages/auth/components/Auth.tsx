@@ -5,8 +5,8 @@ import {
     Button 
 } from '@mui/material';
 
-import { Form } from '../../../features/auth';
-import { Dropdown } from '../../../features/auth';
+import { Form } from 'features/auth';
+import { Dropdown } from 'features/auth';
 
 const Auth = () => {
     const [isNewMember, setIsNewMember] = useState(true);

@@ -1,12 +1,12 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { ThunkDispatch } from "redux-thunk";
-import { Box } from "@mui/material";
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { ThunkDispatch } from 'redux-thunk';
+import { Box } from '@mui/material';
 
-import { TableUI, ToggleTimePeriod } from "../../features/leaderboard";
-import { getUsers } from "../../entities/users/model/actions";
-import { UsersAction } from "../../entities/users/model/types";
-import { AppState } from "../../app/providers/with-redux/types";
+import { TableUI, ToggleTimePeriod } from 'features/leaderboard';
+import { getUsers } from 'entities/users/model/actions';
+import { UsersAction } from 'entities/users/model/types';
+import { AppState } from 'app/providers/with-redux/types';
 
 const styles = {
     leader__page__container: {

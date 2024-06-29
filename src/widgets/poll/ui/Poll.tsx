@@ -3,11 +3,11 @@ import { Box, Typography } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { ThunkDispatch } from 'redux-thunk';
 
-import { getQuestions } from '../../../entities/questions/model/actions';
-import { AppState } from '../../../app/providers/with-redux/types';
-import { QuestionsAction } from '../../../entities/questions/model/types';
-import PollsSwitch  from '../../../features/polls/ui/PollsSwitch'
-import PollsCard from '../../../features/polls/ui/PollsCard';
+import { getQuestions } from 'entities/questions/model/actions';
+import { AppState } from 'app/providers/with-redux/types';
+import { QuestionsAction } from 'entities/questions/model/types';
+import PollsSwitch  from 'features/polls/ui/PollsSwitch'
+import PollsCard from 'features/polls/ui/PollsCard';
 
 const styles = {
     polls__page__header: {

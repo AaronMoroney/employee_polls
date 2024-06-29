@@ -1,4 +1,5 @@
 import { FormControlLabel } from '@mui/material'
+
 import { PollsStatusSwitch } from '../style/PollsStatusStyle'
 
 interface PollSwitchProps {

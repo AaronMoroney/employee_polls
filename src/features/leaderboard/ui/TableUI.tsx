@@ -8,9 +8,9 @@ import {
     TableRow ,
 } from '@mui/material'
 
-import {  User } from '../../../entities/users/model/types';
+import {  User } from 'entities/users/model/types';
 import TableCells from './TableCells';
-import { findUserPosition } from '../../../shared/helpers/leaderboard';
+import { findUserPosition } from 'shared/helpers/leaderboard';
 
 interface TableProps {
     users: Record<string, User>;
