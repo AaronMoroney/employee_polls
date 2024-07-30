@@ -1,9 +1,9 @@
 const SinglePoll = () => {
-    return (
-        <>
-           <p>test</p>
-        </>
-    )   
-}
+  return (
+    <>
+      <p>test</p>
+    </>
+  );
+};
 
-export default SinglePoll
+export default SinglePoll;

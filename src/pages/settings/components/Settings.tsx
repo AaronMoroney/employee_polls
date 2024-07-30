@@ -1,16 +1,11 @@
-import { Typography } from '@mui/material'
+import { Typography } from "@mui/material";
 
-const Settings  = () => {
-    return (
-        <>
-            <Typography
-                variant='h4'
-            >
-                Settings
-            </Typography>
-            
-        </>
-    )
-}
+const Settings = () => {
+  return (
+    <>
+      <Typography variant="h4">Settings</Typography>
+    </>
+  );
+};
 
-export default Settings
+export default Settings;

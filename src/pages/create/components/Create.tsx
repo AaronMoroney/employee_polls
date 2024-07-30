@@ -1,20 +1,17 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import PopUpModal from 'features/polls/ui/PopUpModal';
-import { Poll } from 'widgets/poll';
+import PopUpModal from "features/polls/ui/PopUpModal";
+import { Poll } from "widgets/poll";
 
 const Create = () => {
-    const [ openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(true);
 
-    return (
-        <>
-           <PopUpModal
-                openModal={openModal}
-                setOpenModal={setOpenModal} 
-           />
-           <Poll />
-        </>
-    )
-}
+  return (
+    <>
+      <PopUpModal openModal={openModal} setOpenModal={setOpenModal} />
+      <Poll />
+    </>
+  );
+};
 
-export default Create
+export default Create;

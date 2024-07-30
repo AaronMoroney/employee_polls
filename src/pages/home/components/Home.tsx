@@ -1,11 +1,11 @@
-import { Poll } from 'widgets/poll';
+import { Poll } from "widgets/poll";
 
 const Home = () => {
-    return (
-        <>
-            <Poll />
-        </>
-    )
-}
+  return (
+    <>
+      <Poll />
+    </>
+  );
+};
 
-export default Home
+export default Home;
