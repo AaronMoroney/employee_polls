@@ -1,20 +1,17 @@
-import { FormControlLabel } from '@mui/material'
+import { FormControlLabel } from "@mui/material";
 
-import { PollsStatusSwitch } from '../style/PollsStatusStyle'
+import { PollsStatusSwitch } from "../style/PollsStatusStyle";
 
 interface PollSwitchProps {
-    onClick: () => void; 
+  onClick: () => void;
 }
 
 const PollsSwitch: React.FC<PollSwitchProps> = () => {
-    return (
-        <>
-            <FormControlLabel
-                control={<PollsStatusSwitch  />}
-                label="Show Complete"
-            />
-        </>
-    )
-}
+  return (
+    <>
+      <FormControlLabel control={<PollsStatusSwitch />} label="Show Complete" />
+    </>
+  );
+};
 
-export default PollsSwitch
+export default PollsSwitch;

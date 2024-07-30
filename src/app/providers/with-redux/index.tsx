@@ -12,4 +12,4 @@ export const withRedux = <T extends Record<string, unknown>>(
         <Component {...props} />
       </Provider>
     );
-};
+  };
